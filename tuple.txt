@@ -1,0 +1,91 @@
+		=============================================
+						tuple
+		=============================================
+Properties
+-----------------
+=>'tuple' is one of the pre-defined class and treated as list data type
+=>The purpose of tuple data type is that " To store Multiple Values either of same Type OR Different Type  OR Both the Types in Single Object with Unique and Duplicate Values".
+=>The Values / Elements of tuple must be stored / Organized with Braces ( ) and Values must be 
+    separted  by comma.
+=>An object of tuple maintains Insertion order.
+=>On object of tuple, we can perform Both Indexing and Slicing Operations.
+=>An object of tuple belongs to IMMutable
+=>W.r.t tuple class, we can create 2 types of tuple objects. They are
+		a) Empty tuple
+		b) Non-Empty tuple
+--------------------------
+a) Empty tuple:
+--------------------------
+=>An empty tuple is one, which does not contain any Elements and whose length is 0.
+=>Syntax:   varname=()
+			(OR)
+		   varname=tuple()
+--------------------------
+b) Non-Empty tuple:
+--------------------------
+=>An Non-Empty tuple is one, which  contains Elements and whose length is >0.
+=>Syntax:   varname=(Val1,Val2.....Val-n)
+				(OR)
+=>Syntax:   varname=Val1,Val2.....Val-n
+			(OR)
+		   varname=tuple(object)
+----------------------------------------------------------------------------------------------------------------------------------------------
+NOTE:  The Functionality of tuple is exactly similar to Functionality of list but list object belongs to 
+             Mutable and tuple object belongs to Immutable.
+----------------------------------------------------------------------------------------------------------------------------------------------
+Examples:
+----------------------------------------------------------------------------------------------------------------------------------------------
+>>> t1=(10,20,30,10,50,60,70)
+>>> print(t1,type(t1))----------------(10, 20, 30, 10, 50, 60, 70) <class 'tuple'>
+>>> t2=(100,"Travis",33.33,"HYD")
+>>> print(t2,type(t2))-----------(100, 'Travis', 33.33, 'HYD') <class 'tuple'>
+>>> len(t1)-----------7
+>>> len(t2)----------4
+>>> t3=100,"Rossum",44.44,"PYTHON"
+>>> print(t3,type(t3))-----(100, 'Rossum', 44.44, 'PYTHON') <class 'tuple'>
+--------------------------------------------
+>>> t1=()
+>>> print(t1,type(t1))------------() <class 'tuple'>
+>>> len(t1)-------------------------0
+>>> t2=tuple()
+>>> print(t2,type(t2))-----------() <class 'tuple'>
+>>> len(t2)------------------------0
+--------------------------------------------
+>>> t=(100,"Rossum",44.44,"PYTHON")
+>>> print(t,type(t),id(t))--------(100, 'Rossum', 44.44, 'PYTHON') <class 'tuple'> 2605398318096
+>>> t[0]--------------100
+>>> t[1]--------------'Rossum'
+>>> t[-1]------------'PYTHON'
+>>> t[0]=200-----------TypeError: 'tuple' object does not support item assignment
+----------------------------------------------
+>>> l1=[100,"Rossum",44.44,"PYTHON"]
+>>> print(l1,type(l1))-----------[100, 'Rossum', 44.44, 'PYTHON'] <class 'list'>
+>>> t1=tuple(l1)
+>>> print(t1,type(t1))----------(100, 'Rossum', 44.44, 'PYTHON') <class 'tuple'>
+>>> l2=list(t1)
+>>> print(l2,type(l2))----------[100, 'Rossum', 44.44, 'PYTHON'] <class 'list'>
+------------------------------------------------------------
+>>> t=(100,"Rossum",44.44,"PYTHON")
+>>> print(t,type(t))-----------(100, 'Rossum', 44.44, 'PYTHON') <class 'tuple'>
+>>> t[0:3]-----------(100, 'Rossum', 44.44)
+>>> t[::-1]-------------('PYTHON', 44.44, 'Rossum', 100)
+-------------------------------------------------------------------------------------------------------------------------
+Special Points
+---------------------------
+>>> a=10
+>>> t=tuple(a)--------------TypeError: 'int' object is not iterable
+>>> t=tuple(a,)-------------TypeError: 'int' object is not iterable
+>>> t=tuple((a))-------------TypeError: 'int' object is not iterable
+>>> t=tuple([a])
+>>> print(t,type(t))--------------(10,) <class 'tuple'>
+--------OR-------------
+>>> b=100
+>>> t=(b,)
+>>> print(t,type(t))-----------(100,) <class 'tuple'>
+-----------------------------------
+>>> b=12.34
+>>> t=(b)
+>>> print(t,type(t))------------12.34 <class 'float'>
+>>> t=(b,)
+>>> print(t,type(t))------------(12.34,) <class 'tuple'>
+----------------------------------------------------------------------------------------------------------------------------
